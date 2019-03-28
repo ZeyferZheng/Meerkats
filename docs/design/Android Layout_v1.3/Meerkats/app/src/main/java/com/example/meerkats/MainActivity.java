@@ -4,6 +4,7 @@ import android.Manifest;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -42,9 +45,27 @@ public class MainActivity extends AppCompatActivity {
     private String rootPath;
     private TitleAdapter titleAdapter;
     private FloatingActionButton ButtonSync;
+    int a = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+        while(a==1){
+            Toast.makeText(MainActivity.this, "Successful Synchronization", Toast.LENGTH_SHORT).show();
+            a--;
+        }
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+
+            public void run() {
+                a++;
+            }
+        }, 0, 1000);
+
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
