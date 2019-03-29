@@ -1,0 +1,4 @@
+#Thu Mar 28 00:47:44 GMT 2019
+base.0=C\:\\Zeyfer\\UK\\Study\\6 Group Project (XX+00\=00)\\Meerkats\\docs\\design\\Android Layout_v1.3\\Meerkats\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
